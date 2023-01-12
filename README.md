@@ -1,6 +1,6 @@
 # Full-stack Trivia!
 
-Full stack trivia is a quiz-based game that allows openents to test how much they know about the basics of development
+Full stack trivia is a quiz-based game that allows openents to test how much they know about the basics of development; HTML5. CSS3. Javascript, and DOM manipulation
 
 Assigned from:
 [GA users only](https://git.generalassemb.ly/dc-wdi-fundamentals/game-of-war)
@@ -36,7 +36,7 @@ Suggested Ways to Get Started
 •	Consult documentation resources (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
 •	Don’t be afraid to write code that you know you will have to remove later. Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
 
-### Constructors
+### HTML
 
 Constructors are special methods that will be invoked whenever we create a new instance of our class. If our class is what defines our template, the constructor method is what fills it in for a particular instance.
 Here is an example of how a constructor is used to code the game: 
@@ -44,10 +44,10 @@ Here is an example of how a constructor is used to code the game:
        constructor(cards = newDeck()) {
         this.cards = cards;
       };
-### Attributes
+### CSS
 If we want to create our own classes, all we need is a name for our class and a definition of the information and behavior we want to encapsulate in our class. The information and behavior we want to describe with our class has a special name: an attribute. There are two kinds of attributes: data attributes and procedural attributes (more commonly called methods).
 
-### Methods
+### Javascript
 Methods are the "functions of Classses" used methods to initialize, modify, or act on an objects' internal state. For example:
 Here's an example of how methods can be used in a class in the Game of War.
 
@@ -60,7 +60,7 @@ Here's an example of how methods can be used in a class in the Game of War.
       };
     };
 
-## Review!
+## Manipulating the DOM
 
 Object oriented programming gives use three major benefits:
 

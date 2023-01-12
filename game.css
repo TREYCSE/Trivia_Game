@@ -1,0 +1,39 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.25;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.5rem solid white;
+    background-color: peru;
+    margin-top: 1rem;
+    padding: 0;
+}
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(80, 20, 165, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;   
+}
+.choice-prefix {
+    background-color: white;
+    color: lightgrey;
+}
+.choice-text {
+    padding: 0.5rem 0.1rem;
+
+}
+
+@media screen and (min-width: 1250px) {
+    .choice-prefix {
+        padding: 0;
+        margin: 0;
+    }
+    .choice-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .choice-text {
+        padding: 0;
+    
+    }
+}
