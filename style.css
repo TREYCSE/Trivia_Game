@@ -1,5 +1,5 @@
 :root {
-    background-color: purple;
+    background-color: rgba(102, 51, 153, 1);
     font-size: 62.5%; /* 10 pixels */
 
 }
@@ -19,17 +19,20 @@
     justify-content: center;
     align-items: center;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
-
 }
 body {
     background-color: lightgrey;
+    border-style: groove;
+    border-width: 0.5rem;
+    justify-content: center;
+    align-items: center;
 }
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
 }
 h1 {
     font-size: 5.4rem; /*4 pixels */
-    color: white;
+    color: lavender;
     margin-bottom: 5rem;
 }
 h1 > span {
@@ -45,11 +48,10 @@ h3 {
     font-size: 2.8rem;
     font-weight: 500;
 }
-
-/*
 .container {
+    display: flex;
+    flex-direction: column;
 }
-*/
 
 .btn:hover {
     cursor: pointer;
@@ -81,6 +83,10 @@ h3 {
         padding: 1rem;
         margin-bottom: 1rem;
     }
+    body {
+        border-style: dashed;
+        border-width: 12rem;
+    }
 }
 
 @media screen and (min-width: 1250px) {
@@ -89,6 +95,7 @@ h3 {
         min-height: 20rem;
         margin-top: 3.5rem;
         margin-left: 1rem;
+        max-width: 82.5rem;
     }
     .btn {
         display: block;

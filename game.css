@@ -1,28 +1,35 @@
+
 .choice-container {
     display: flex;
     margin-bottom: 0.25;
     width: 100%;
     font-size: 1.8rem;
     border: 0.5rem solid white;
-    background-color: peru;
+    background-color: rgba(140, 20, 252, 1);
     margin-top: 1rem;
     padding: 0;
 }
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(80, 20, 165, 0.5);
+    box-shadow: 0 0.4rem 2.4rem 0 rgba(80, 20, 365, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;   
 }
 .choice-prefix {
-    background-color: white;
+    background-color: rgba(140, 20, 252, 1);
     color: lightgrey;
+    text-align: left;
+    justify-content: left;
 }
 .choice-text {
-    padding: 0.5rem 0.1rem;
+    padding: 0;
 
 }
-
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
 @media screen and (min-width: 1250px) {
     .choice-prefix {
         padding: 0;
