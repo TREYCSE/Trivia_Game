@@ -8,7 +8,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 console.log(choices);
 
 let currentQuestion = [];
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 /*check to see if it is correct by comparing the answer number */
@@ -16,10 +16,10 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: "OH DOMMY! What is the significance of where you place the <script> mommy? ",
+        question: "OH DOM-MY! What is the significance of where you place the <script> mommy? ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
+        choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
         choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
         answer: 3,
     },
@@ -27,7 +27,7 @@ let questions = [
         question: "If you want to join Software junction, tell me difference between using a standard and an arrow function ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
+        choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
         choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
         answer: 3,
     },
@@ -35,7 +35,7 @@ let questions = [
         question: "Reference and calling may be similar, but if you think they're the same pass the defibulator...tell me baby engineer before you leave the incubator",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
+        choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
         choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
         answer: 3,
     },
@@ -64,7 +64,15 @@ let questions = [
         answer: 3,
     },
     {
-        question: "DOMMY DOMMY! What is the significance of whhere you place the <script> mommy? ",
+        question: "Oh no...the page won't load...it crashes each time what could be wrong do you know??! ",
+        choice1: "it doesn't matter, because it is in the HTML",
+        choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
+        choice3: "it does matter, because paaes load in order and the HTML has to be loaded before the js can add functionality",
+        choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
+        answer: 3,
+    },
+    {
+        question: "Don't get too cocky and forget all the basics..wha's wrong when you see s 404 error on your psges? ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
@@ -72,20 +80,12 @@ let questions = [
         answer: 3,
     },
     {
-        question: "DOMMY DOMMY! What is the significance of whhere you place the <script> mommy? ",
-        choice1: "it doesn't matter, because it is in the HTML",
+        question: "You're on a tight deadline but you need your code to last___________[fill in the blank] ",
+        choice1: "Make it work, make it good, make it fast!",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
         choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
-        answer: 3,
-    },
-    {
-        question: "DOMMY DOMMY! What is the significance of whhere you place the <script> mommy? ",
-        choice1: "it doesn't matter, because it is in the HTML",
-        choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
-        choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
-        answer: 3,
+        answer: 1,
     },
     {
         question: "DOMMY DOMMY! What is the significance of whhere you place the <script> mommy? ",
@@ -229,11 +229,41 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+
+    /* look up SYMBOLS 
+    if(availableQuestions.length == 0 ) || questionCounter ≥ 
+*/
+
     questionCounter ++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
+
+    choices.forEach( choice => {         
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number];
+    })
+    /*so the computer doesn't choose from questions already given */
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
 };
+
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"]
+        console.log(selectedAnswer);
+        getNewQuestion();
+});
+});
+
 startGame();
 
 /* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
+
+
+

@@ -23,7 +23,7 @@
 }
 .choice-text {
     padding: 0;
-
+    width: 100%
 }
 .container {
     display: flex;
