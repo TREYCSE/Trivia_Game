@@ -16,7 +16,7 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: "OH DOM-MY! What is the significance of where you place the <script> mommy? ",
+        question: "OH DOM-MY! What is the significance of where you place the <script> MOM-my? ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
@@ -24,7 +24,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "If you want to join Software junction, tell me difference between using a standard and an arrow function ",
+        question: "If you want to join Software junction, tell me difference between using a standard and an arrow function...",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
@@ -32,7 +32,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "Reference and calling may be similar, but if you think they're the same pass the defibulator...tell me baby engineer before you leave the incubator",
+        question: "Reference and calling may be similar in syntax but have a different use...tell me how that is before you overestimate yourself and lose!",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
@@ -48,7 +48,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "DOMMY DOMMY! What is the significance of whhere you place the <script> mommy? ",
+        question: "Sometimes the console says undefined...when there's data there tell me before you lose your mind!",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
@@ -64,7 +64,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "Oh no...the page won't load...it crashes each time what could be wrong do you know??! ",
+        question: "The page won't load...it crashes each time.. what could be wrong?? Is there a bug you can find!??! ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paaes load in order and the HTML has to be loaded before the js can add functionality",
@@ -72,7 +72,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "Don't get too cocky and forget all the basics..wha's wrong when you see s 404 error on your psges? ",
+        question: "Don't get too cocky and forget all the basics..what's wrong when you see 404 errors on your pages? ",
         choice1: "it doesn't matter, because it is in the HTML",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
@@ -80,7 +80,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: "You're on a tight deadline but you need your code to last___________[fill in the blank] ",
+        question: "You're on a tight deadline but you need your code to last. So you need to ___________. [fill in the blank]",
         choice1: "Make it work, make it good, make it fast!",
         choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
         choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
@@ -230,9 +230,10 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-    /* look up SYMBOLS 
-    if(availableQuestions.length == 0 ) || questionCounter ≥ 
-*/
+/*make this greater than or EQUAL to */
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        return window.location.assign("end.html");
+    }
 
     questionCounter ++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -255,8 +256,11 @@ choices.forEach(choice => {
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"]
-        console.log(selectedAnswer);
+        const selectedAnswer = selectedChoice.dataset["number"];
+
+/*strict comparison compares the data type as well */
+/*common technique to give it a default value  CLASSTOAPPLY??*/
+        console.log(selectedAnswer == currentQuestion.answer);
         getNewQuestion();
 });
 });
@@ -265,5 +269,4 @@ startGame();
 
 /* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
 
-
-
+/*change color to red and green and do a pause - check to see if selected answer is the same as the correct answer if so display green if not display red */
