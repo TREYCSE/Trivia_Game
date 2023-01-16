@@ -1,6 +1,6 @@
-# Full-stack Trivia!
+#SOFTWARE-STAR TRIVIA!
 
-Full stack trivia is a quiz-based game that allows openents to test how much they know about the basics of development; HTML5. CSS3. Javascript, and DOM manipulation
+Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development; HTML5. CSS3. Javascript, and DOM manipulation with a focus on debugging rather than coding and insustry/career-based preparation questions. But instead of testing based off of difficult things, 
 
 Assigned from:
 [GA users only](https://git.generalassemb.ly/dc-wdi-fundamentals/game-of-war)
@@ -22,8 +22,9 @@ Requirements for the software and other tools to build, test and push
 - [DOM](https://git.generalassemb.ly/dc-wdi-fundamentals/objects-intro)
 - [HTML, CSS, Javascript](https://git.generalassemb.ly/dc-wdi-fundamentals/javascript-oop/blob/master/object-oriented-javascript.md)
 
-## Object Oriented Programming
-
+## Intent of the Game
+It is intended to test engineers that know the basics, on the nitty gritty of executing a project - before tackling more complicated concepts
+Not only will it test the skills that are overlooked, but those that are assumed. Much of baseline coding can be done not knowing for sure what each thing means or how each thing works and while it may not seem like a problem at the time, when more complicated projects come it will be harder and harder to debug and also to write code that executes what you want from scratch or otherwise.
 
 ### Getting Started
 Suggested Ways to Get Started
