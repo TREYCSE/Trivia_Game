@@ -72,8 +72,13 @@ h3 {
     box-shadow: none;
     transform: none;
 }
-
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 700px) {
+    body {
+        border-style: dashed;
+        border-width: 12rem;
+    }
+}
+@media screen and (min-width: 1050px) {
     * {
         display: flex;
         flex-direction: column;
@@ -95,7 +100,7 @@ h3 {
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
     * {
         flex-direction: row;
         min-height: 20rem;

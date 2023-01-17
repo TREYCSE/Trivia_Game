@@ -1,6 +1,6 @@
-#SOFTWARE-STAR TRIVIA!
+# SOFTWARE-STAR TRIVIA!
 
-Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development; HTML5. CSS3. Javascript, and DOM manipulation with a focus on debugging rather than coding and insustry/career-based preparation questions. But instead of testing based off of difficult things, 
+Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development; HTML5. CSS3. Javascript, and DOM manipulation with a focus on debugging rather than coding and insustry/career-based preparation questions.
 
 Assigned from:
 [GA users only](https://git.generalassemb.ly/dc-wdi-fundamentals/game-of-war)

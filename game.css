@@ -58,6 +58,25 @@ p {
     text-emphasis: bold;
     text-decoration: bold;
 }
+@media screen and (min-width: 700px) {
+
+}
+@media screen and (min-width: 980px) {
+    .choice-prefix {
+        padding: 0;
+        margin: 0;
+    }
+    .choice-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .choice-text {
+        margin: 0.35rem;
+        padding: 0;
+    
+    }
+}
+
 @media screen and (min-width: 1250px) {
     .choice-prefix {
         padding: 0;
