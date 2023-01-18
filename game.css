@@ -3,7 +3,7 @@
     margin-bottom: 0.25;
     width: 100%;
     font-size: 1.2rem;
-    border: 0.5rem solid white;
+    border: 0.1rem solid white;
     background-color: rgba(135, 211, 124, 1);
     margin-top: 1rem;
     padding: 0;
@@ -15,10 +15,11 @@
     transition: transform 150ms;   
 }
 .choice-prefix {
-    background-color: rgba(135, 211, 124, 1);
-    color: lightgrey;
+    background-color: none;
+    color: white;
     text-align: left;
     justify-content: left;
+    border: none;
 }
 .choice-text {
     padding: 0;
@@ -57,6 +58,12 @@
 p {
     text-emphasis: bold;
     text-decoration: bold;
+}
+.correct {
+    background-color: rgba(0, 230, 64, 1);
+}
+.incorrect {
+    background-color: red;
 }
 @media screen and (min-width: 700px) {
 

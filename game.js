@@ -35,8 +35,8 @@ let questions = [
         question: "Calling by reference and value may be similar in syntax but have a different use...so tell me which of the statements from the below are true?!",
         choice1: "Call by reference is an approach where 2 variables become the same by copying the value but in 2 separate spots in the memory",
         choice2: "Call by value is an approach in which all objects interact by reference.",
-        choice3: "in Call by value, changes in one object variable affect the other object variable.",
-        choice4: "Both these variables occupy separate locations in memory. Thus, if changes are made in a particular variable it does not affect the other one.",
+        choice3: "In call by value, changes in one object variable affect the other object variable.",
+        choice4: "In call by value, changes are made in a particular variable it does not affect the other one.",
         answer: 4,
     },
     {
@@ -90,8 +90,8 @@ let questions = [
     {
         question: "You can code the right syntax but knowing which code to write takes a master....what code would you write if you wanted to sum all the digits of an array in a way that makes it faster?",
         choice1: "That is not imporant",
-        choice2: "Creste an equation where each index value is added to the next",
-        choice3: "function that sums the indices of the array items",
+        choice2: "Create an equation where each index value is added to the next",
+        choice3: "function that returns the sum of the array items without adding individual indices",
         choice4: "The only way is to manually calculate and then add the number into Javascript",
         answer: 3,
     },
@@ -128,15 +128,15 @@ let questions = [
         answer: 1,
     },
     {
-        question: "An id and a class both give elements style...but what makes them different be quick don't take a while!! ",
+        question: "An ID and a class both give elements style...but what makes them different be quick don't take a while!! ",
         choice1: "They are synonymous",
-        choice2: "Class keyword is added to tag but id is not",
-        choice3: "Class adds stying in the HTML but id adds styling in the CSS ",
+        choice2: "Class keyword is added to tag but ID is not",
+        choice3: "Class adds stying in the HTML but ID adds styling in the CSS ",
         choice4: "Only one ID selector can be attached to an element but multiple class selectors can be attached to an element.",
         answer: 3,
     },
     {
-        question: "Your code might run without not being sure....but to pass here dinstiguish a gloabal variable...",
+        question: "Your code might run and you think you're a tech mogul...but to pass here tell me - what is a global variable...",
         choice1: "const",
         choice2: "let",
         choice3: "a variable type that is declared outside any function and is accessible to all functions throughout the program",
@@ -146,26 +146,26 @@ let questions = [
     {
         question: "Your code can work but it's messy and coworkers are mad at it..... ",
         choice1: "because my code works this time, but just this once cause it's static",
-        choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
-        choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
-        answer: 3,
+        choice2: "because I am perfect and others are problematic",
+        choice3: "because I was being too darn dramatic",
+        choice4: "THE ANSWER IS B",
+        answer: 1,
     },
     {
         question: "This is computer science but let's do some math...if you use == and not === what difference would that have?",
-        choice1: " === is strict equality and means the datatype is being compared between variables as well",
-        choice2: "it doesn't matter, because it is in the HTML",
-        choice3: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice4: "Neither of them work",
-        answer: 1,
+        choice1: "The deep equal make the deeply comparison of objects possible (not only the first level)",
+        choice2: "This is strict liability which === checks the the equality between two values with their types. ",
+        choice3: "== is weak equality or double equals == converts the two values to a same type (named type coercion) and then compare them. ",
+        choice4: "B and C",
+        answer: 4,
     },
     {
         question: "Center your content... 3 ways to try....do all three or just say which one is right.. ",
         choice1: "Align Items",
         choice2: "Justify Content",
         choice3: "Text-align",
-        choice4: "ANY - depending on what trying to center and what html element/tag vs class adding the style to",
-        answer: 3,
+        choice4: "Depends on what type of content you are trying to center",
+        answer: 4,
     },
     {
         question: "I can change the size of the text of this element but not this one, tell me why this is so we can continue the fun! ",
@@ -213,7 +213,7 @@ let questions = [
         choice2: "network",
         choice3: "be consistent, persistent, and constantly practice and improve what you can present to employers!",
         choice4: "ALL OF THE ABOVE - CLICK THIS ONE - THIS IS THE ANSWER - oops who wrote that there",
-        answer: 3,
+        answer: 4,
     },
     {
         question: "Which of these are skills a Full-Stack developer should have? ",
@@ -242,7 +242,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         return window.location.assign("end.html");
     }
-
+/* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
     questionCounter ++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -269,19 +269,21 @@ choices.forEach(choice => {
 /*strict comparison compares the data type as welloes not */
 /*common technique to give it a default value  CLASSTOAPPLY??*/
 
-        let classApply = "incorrect";
+        let classA = "incorrect";
         if (selectedAnswer == currentQuestion.answer) {
-            classApply = "correct";
+            classA = "correct";
         }
-        getNewQuestion();
-        console.log(classApply);
-        /*ERROR Uncaught TypeError: Cannot read properties of undefined (reading 'classlist') at HTMLParagraphElement.<anonymous> (game.js:269:38) */
-        selectedChoice.parentElement.classlist.add(classApply); /*- LOOK INTO WHAT THIS CLASS LIST IS SUPPOSED TO BE DOING AND THE SYNTAX TO FIND MY BUG */
+        selectedChoice.parentElement.classList.add(classA);
+/* only wwant to show the color for a moment after user clicks so now it will be removed so the div container does not stay the same color for the next question
+To do this without it not canceling out - need to set a set time-out */
+        setTimeout( () => {
+            selectedChoice.parentElement.classList.remove(classA); 
+            getNewQuestion();
+        }, 750);
+
+        console.log(classA);
 });
 });
 
 startGame();
-
-/* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
-
 /*change color to red and green and do a pause - check to see if selected answer is the same as the correct answer if so display green if not display red */
