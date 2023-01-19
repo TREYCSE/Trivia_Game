@@ -6,6 +6,8 @@ const question = document.getElementById("question");
 //creating an arrray from the HTML Collection list so that I can use array functions and manage the data - note that HTML needs to load before js or it won't have access to the data I am reference=ing
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 console.log(choices);
+const questionCounters = document.getElementById("questionCounter");
+const scores = document.getElementById("score");
 
 let currentQuestion = [];
 let acceptingAnswers = false;
@@ -17,10 +19,10 @@ let availableQuestions = [];
 let questions = [
     {
         question: "OH DOM-MY! What is the significance of where you place the <script> MOM-my? ",
-        choice1: "it doesn't matter, because it is in the HTML",
-        choice2: "it doesn't matter, because the js is linked to the HTML and CSS",
-        choice3: "it does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
-        choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
+        choice1: "It doesn't matter, because it is in the HTML",
+        choice2: "It doesn't matter, because the js is linked to the HTML and CSS",
+        choice3: "It does matter, because pages load in order and the HTML has to be loaded before the js can add functionality",
+        choice4: "It does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
         answer: 3,
     },
     {
@@ -64,7 +66,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Before it's too late and the timer ruptures.. tell me which of the following is NOT true of linear and non-linear data structure...",
+        question: "Before the timer ruptures.. which of the following is NOT true of linear and non-linear data structures?",
         choice1: "Linear data structure is a structure in which data elements are adjacent to each other",
         choice2: "Linear data structure examples include linked lists, arrays, queues, and stacks, graphs and trees",
         choice3: "Non-linear data structure is a structure in which each data element can connect to over two adjacent data elements",
@@ -106,9 +108,9 @@ let questions = [
     {
         question: "CSS is hard but the computer is literal...what's a big problem that might first seem miniscule? ",
         choice1: "Syntax: make sure there is a period after everything",
-        choice2: "CSS: Cascading Style Sheets - make sure there are no properties being overruled by another style father down in the sheet",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
-        choice4: "it does matter, because the pages need to load the Javascript first because functions take longer to load so it keeps your page fast",
+        choice2: "CSS: Cascading Style Sheets - make sure there are no properties being overruled by another style further down in the sheet",
+        choice3: "the css file has to be named 'style.css",
+        choice4: "All of the above",
         answer: 2,
     },
     {
@@ -168,12 +170,12 @@ let questions = [
         answer: 4,
     },
     {
-        question: "I can change the size of the text of this element but not this one, tell me why this is so we can continue the fun! ",
-        choice1: "Tag elements like <h5> have set sizes but  <p> can be given a size",
-        choice2: "Doesn't matter b/c of REM",
-        choice3: "it does matter, because paages load in order and the HTML has to be loaded before the js can add functionality",
-        choice4: "it does matter, because the pages need to load the js first because functions take longer to load so it keeps your page fast",
-        answer: 1,
+        question: "Render...render...Your function I see...so what does it mean... to do this dynamically",
+        choice1: "It means static",
+        choice2: "Update it often",
+        choice3: "Doens't stay the same it changes with user action",
+        choice4: "The user writes some of the code",
+        answer: 3,
     },
     {
         question: "You're a great engineer but can you land a job, depends on if you can do this thing or not... ",
@@ -244,6 +246,10 @@ getNewQuestion = () => {
     }
 /* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
     questionCounter ++;
+
+    questionCounters.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -273,6 +279,10 @@ choices.forEach(choice => {
         if (selectedAnswer == currentQuestion.answer) {
             classA = "correct";
         }
+
+        if(classA === "correct")  {
+            incrementScore(CORRECT_BONUS);
+        }
         selectedChoice.parentElement.classList.add(classA);
 /* only wwant to show the color for a moment after user clicks so now it will be removed so the div container does not stay the same color for the next question
 To do this without it not canceling out - need to set a set time-out */
@@ -284,6 +294,11 @@ To do this without it not canceling out - need to set a set time-out */
         console.log(classA);
 });
 });
+/* */
+incrementScore = num => {
+    score +=num;
+    scores.innerText = score;
+}
 
 startGame();
 /*change color to red and green and do a pause - check to see if selected answer is the same as the correct answer if so display green if not display red */

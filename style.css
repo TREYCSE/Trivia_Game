@@ -1,5 +1,7 @@
 :root {
     background-image: url("https://i.imgur.com/UnxtqDu.jpg");
+    /*
+    background-image: linear-gradient(red, yellow 10%, green 20%); */
     font-size: 62.5%; /* 10 pixels */
     justify-content: center;
     align-items: center;
