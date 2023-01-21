@@ -10,7 +10,7 @@ It is intended to test engineers that know the basics, on the nitty gritty of ex
 Not only will it test the skills that are overlooked, but those that are assumed. Much of baseline coding can be done not knowing for sure what each thing means or how each thing works and while it may not seem like a problem at the time, when more complicated projects come it will be harder and harder to debug and also to write code that executes what you want from scratch or otherwise.
 
 ## Brief Example
-![image)(]https://i.imgur.com/dUtaY4P.jpg)
+  ![image](https://i.imgur.com/dUtaY4P.jpg)
 
 ## List of Features / User Stories
 This typically will be a short list of the features / user stories that you planned during the development phase of the project
