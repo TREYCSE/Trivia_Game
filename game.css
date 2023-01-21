@@ -112,6 +112,8 @@ p {
     margin: 0;
     padding: 0;
 }
+
+/* */
 @media screen and (min-width: 700px) {
 
 }
@@ -148,7 +150,7 @@ p {
     #heading {
         font-size: 0.8rem;
         border-width: 0.3rem;
-        margin-left: 0.4rem;
+        margin-left: 0.1rem;
     }
     #hud {
         display: flex;

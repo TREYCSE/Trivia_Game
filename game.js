@@ -135,11 +135,11 @@ let questions = [
         choice2: "Class keyword is added to tag but ID is not",
         choice3: "Class adds stying in the HTML but ID adds styling in the CSS ",
         choice4: "Only one ID selector can be attached to an element but multiple class selectors can be attached to an element.",
-        answer: 3,
+        answer: 4,
     },
     {
         question: "Your code might run and you think you're a tech mogul...but to pass here tell me - what is a global variable...",
-        choice1: "const",
+        choice1: "let , var, and const",
         choice2: "let",
         choice3: "a variable type that is declared outside any function and is accessible to all functions throughout the program",
         choice4: "var",
@@ -170,12 +170,12 @@ let questions = [
         answer: 4,
     },
     {
-        question: "Render...render...Your function I see...so what does it mean... to do this dynamically",
-        choice1: "It means static",
-        choice2: "Update it often",
-        choice3: "Doens't stay the same it changes with user action",
-        choice4: "The user writes some of the code",
-        answer: 3,
+        question: "I know I'm funny but I'm not joking,  you need to call your function where should you invoke it?",
+        choice1: "When you want it to be loaded in the DOM",
+        choice2: "Anywhere outside of the function",
+        choice3: "At the bottom of the function",
+        choice4: "Invoke all functions at the top of the page",
+        answer: 1,
     },
     {
         question: "You're a great engineer but can you land a job, depends on if you can do this thing or not... ",
@@ -183,7 +183,7 @@ let questions = [
         choice2: "debug",
         choice3: "improve code written by others and yourself",
         choice4: "ALL THIS AND MORE!",
-        answer: 3,
+        answer: 4,
     },
     {
         question: "Which is a backend skill?",
@@ -207,7 +207,7 @@ let questions = [
         choice2: "Front-end developers create the invisible structure that helps websites function properly, but Back-end developers design the visual aspects of websites for users to interact with, including colors, layout, and fonts.",
         choice3: "Back-end developers create the invisible structure that helps websites function properly, but Front-end developers design the visual aspects of websites for users to interact with, including colors, layout, and fonts.",
         choice4: "Back-end focuses on the user-facing end",
-        answer: 1,
+        answer: 3,
     },
     {
         question: "What should you do if you want to break into TECH as a new developer?!",
@@ -227,7 +227,7 @@ let questions = [
     },
 ];
 
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 4;
 const MAX_QUESTIONS = 25;
 
 startGame = () => {
