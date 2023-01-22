@@ -10,15 +10,32 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <h3>YOU HAVE REACHED THE END OF YOUR EXAMINATION YOUNG ENGINEER....how do you feel now?🤪</h3>
-            <div id="hud-item">
-                <p class="final-score">
-                    FINAL SCORE
-                </p>
-                <h3 class="final-text" id="final-texts"></h3>
+            <div class = "container">
+                <div  id="end" class="flax-center flex-column">
+                    <h4>YOU HAVE REACHED THE END OF YOUR EXAMINATION YOUNG ENGINEER....do you feel like a STAR?!?🌟🤪</h4>
+                    <h1 id="finalScore"></h1>
+                    <form>
+                        <input
+                            type = "text"
+                            name = "username"
+                            id = "username"
+                            placeholder = "username"
+                        />
+                        <button 
+                            type = "submit"
+                            class = "btn"
+                            id = "saveBtn"
+                            onClick = "saveScore(event)"
+                            
+                        >
+                        SAVE HERE
+                        </button>
+                    </form>
+                    <a class = "btn" href = "game.html">Play Again!</a>
+                    <a class = "btn" href = "index.html">Go HOME</a>
+                </div>
             </div>
-        </header>
-        <script src="game.js"></script>
+            
     </body>
+    <script src="end.js"></script>
 </html>

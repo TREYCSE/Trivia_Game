@@ -5,7 +5,6 @@
 const question = document.getElementById("question");
 //creating an arrray from the HTML Collection list so that I can use array functions and manage the data - note that HTML needs to load before js or it won't have access to the data I am reference=ing
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
 const questionCounters = document.getElementById("questionCounter");
 const scores = document.getElementById("score");
 
@@ -234,7 +233,6 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
@@ -242,6 +240,7 @@ getNewQuestion = () => {
 
 /*make this greater than or EQUAL to */
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem("mostRecentScore", score);
         return window.location.assign("end.html");
     }
 /* use Math.floor to return a random number for the random question - a random nunmber between 0-3. Math.random alone returns a  decimal between 0-1 */
@@ -275,7 +274,7 @@ choices.forEach(choice => {
 /*strict comparison compares the data type as welloes not */
 /*common technique to give it a default value  CLASSTOAPPLY??*/
 
-        let classA = "incorrect";
+        const classA = "incorrect";
         if (selectedAnswer == currentQuestion.answer) {
             classA = "correct";
         }
