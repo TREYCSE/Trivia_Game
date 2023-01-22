@@ -27,10 +27,17 @@ Requirements for the software and other tools to build, test and push
 - [DOM](https://git.generalassemb.ly/dc-wdi-fundamentals/objects-intro)
 - [HTML, CSS, Javascript](https://git.generalassemb.ly/dc-wdi-fundamentals/javascript-oop/blob/master/object-oriented-javascript.md)
 
-### CSS
-Responsive design for mobile, ipad, small desktop, and desktop.
+### HTML and CSS
 
-### Javascript
+HTML
+question containers, form to collect user score if they choose to submit.
+Not long code but extremely vital as everything is built based off of these containers
+
+CSS
+Responsive design for mobile, ipad, small desktop, and desktop.
+Not only styiling but positioning inluding things like hover effects, which shouldn't be confused with JavaScript functionality which can do things like change the property of an element (like the color of the container to red or green depending on the selection that the user makes)
+
+### Javascript Functions
 
 This is a basic function used in the game. Within this basic function contains all of the information needed to start the game.
 This includes the question counter and scores which will both be dynamically updated, the questions (as well as the questions left after a random question is taken from the array).
@@ -45,6 +52,7 @@ CODE SNIPPET:
       getNewQuestion();
     };
 
+But is also responsible for key functions like the colors changing based on the answer being correct/incorrect. 
 
 ## Manipulating the DOM
 
@@ -55,7 +63,7 @@ CODE SNIPPET:
 
 Ways utilized DOM manipulation for the game
 
-> (1)
+> (1) Changes properties of HTML elments from JS file
 > (2) classList
 > (2) Arrays
 

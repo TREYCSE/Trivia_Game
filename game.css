@@ -113,11 +113,27 @@ p {
     padding: 0;
 }
 
-/* */
+/*
 @media screen and (min-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 125%;
+    }
+    body {
+        width: 65rem;
+    }
+    .choice-container {
+        width: 600px;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
 
 }
-@media screen and (min-width: 980px) {
+*/
+@media screen and (min-width: 880px) {
     .choice-prefix {
         padding: 0;
         margin: 0;
@@ -125,9 +141,10 @@ p {
     .choice-container {
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
     .choice-text {
-        margin: 0.35rem;
+        margin: 0.15rem;
         padding: 0;
     
     }

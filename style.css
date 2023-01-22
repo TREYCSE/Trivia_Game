@@ -68,6 +68,16 @@ h3 {
     transition: transform 150ms;
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    width: 20rem;
+    box-shadow: 0 0.2rem 0.1rem 0 rgba(200, 247, 197, 1);
+}
 /* for accepting high scores - */
 .btn[disabled]:hover {
     cursor: not-allowed;
