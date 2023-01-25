@@ -4,7 +4,7 @@ Assigned from:
 [GA users only](https://pages.git.generalassemb.ly/SEIRFX-1107/curriculum/projects/front-end-game)
 
 ## Description
-Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development; HTML5, CSS3, Javascript, and DOM manipulation with a focus on debugging rather than coding and insustry/career-based preparation questions.
+Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development with a focus on debugging rather than coding and insustry/career-based preparation questions.
 
 It is intended to test engineers that know the basics, on the nitty gritty of executing a project - before tackling more complicated concepts
 Not only will it test the skills that are overlooked, but those that are assumed. Much of baseline coding can be done not knowing for sure what each thing means or how each thing works and while it may not seem like a problem at the time, when more complicated projects come it will be harder and harder to debug and also to write code that executes what you want from scratch or otherwise.
