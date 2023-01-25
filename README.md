@@ -37,17 +37,15 @@ Requirements for the software and other tools to build, test and push
 
 ### HTML and CSS
 
-HTML
-question containers, form to collect user score if they choose to submit.
-Not long code but extremely vital as everything is built based off of these containers
-
+1. HTML
+The HTML files  for the game isn't long code but extremely vital as everything is built based off of these containers.
 Some major features included in the HTML is: 
 > 1. DIV containers
 > 2. buttons
 > 2. text input form to gather input from user (username)
 
-CSS
-CSS is mainly responsible for my styling, but also positioning inluding things like hover effects, which shouldn't be confused with JavaScript functionality which can do things like change the property of an element (like the color of the container to red or green depending on the selection that the user makes)
+2. CSS
+CSS is mainly responsible for the styling, but also positioning inluding things like hover effects, which shouldn't be confused with JavaScript functionality which can do things like change the property of an element (like the color of the container to red or green depending on the selection that the user makes)
 CSS was not a highlight of this game, as functionality through vanilla PHP is the main focus, but there has been good progress made on a esponsive design for mobile, ipad, small desktop, and larger desktop.
 
 ### Javascript Functions
@@ -55,14 +53,14 @@ Javascript in this game operates mostly on functions for different portions of h
 
 Below is a basic function used in the game. Within this basic function contains all of the information needed to start the game. This includes the question counter and scores which will both be dynamically updated, the questions (as well as the questions left after a random question is taken from the array). As ezplained before, the getNewQuestion function is invoked within this function (even though it is not defined until later on) because out of the available questions left, the player also would need a new question upon answering.
 
-  CODE SNIPPET:
-    startGame = () => {
-      questionCounter = 0;
-      score = 0;
-      availableQuestions = [...questions];
-      console.log(availableQuestions);
-      getNewQuestion();
-    };
+        startGame = () => {
+          questionCounter = 0;
+          score = 0;
+          availableQuestions = [...questions];
+          console.log(availableQuestions);
+          getNewQuestion();
+        };
+
 
 
 ## Manipulating the DOM
