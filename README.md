@@ -12,12 +12,14 @@ Not only will it test the skills that are overlooked, but those that are assumed
 ## Brief Example
   ![image](https://i.imgur.com/dUtaY4P.jpg)
 
-## List of Features / User Stories
+## Features
 1. BRONZE:  significant progress.
 > The Bronze level includes a responsive self-scoring game where the user is able to test and score their knowledge on the basics of development. For this to be completed, tyling needs improvement
+
 2. SILVER: in progress.
 >1. Styling + positioning perfecion in CSS
 >2. Debug display of user scores
+
 3. Gold: INCOMPLETE
 > 1. perfect Styling + positioning with CSS
 > 2. add timer and progress bar
@@ -31,7 +33,7 @@ Not only will it test the skills that are overlooked, but those that are assumed
 >2. CSS3
 >3. Javascript
 
-### Prerequisites to Build - "Vanilla"
+### Prerequisites to Build - "Vanilla" PHP Front-End Game
 
 Requirements for the software and other tools to build, test and push 
 - [HTML, CSS, Javascript, and the DOM](https://www.w3schools.com/js/js_htmldom.asp)
