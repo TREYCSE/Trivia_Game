@@ -13,16 +13,17 @@ Not only will it test the skills that are overlooked, but those that are assumed
   ![image](https://i.imgur.com/dUtaY4P.jpg)
 
 ## List of Features / User Stories
-Bronze: significant progress. The Bronze level includes a responsive self-scoring game where the user is able to test and score their knowledge on the basics of development. For this to be completed, tyling needs improvement
-Silver: in progress
-  Styling + positioning perfecion in CSS
-  Debug display of user scores
-Gold: INCOMPLETE
-  perfect Styling + positioning with CSS
-  add timer and progress bar
-  add multiplayer options
-  store questions in json file and remove from JS
-  section questions based off of topic and expand
+1. BRONZE:  significant progress.
+> The Bronze level includes a responsive self-scoring game where the user is able to test and score their knowledge on the basics of development. For this to be completed, tyling needs improvement
+2. SILVER: in progress.
+>1. Styling + positioning perfecion in CSS
+>2. Debug display of user scores
+3. Gold: INCOMPLETE
+> 1. perfect Styling + positioning with CSS
+> 2. add timer and progress bar
+> 3. add multiplayer options
+> 4. store questions in json file and remove from JS
+> 5. section questions based off of topic and expand
 
 
 ## Technologies
@@ -37,15 +38,13 @@ Requirements for the software and other tools to build, test and push
 
 ### HTML and CSS
 
-1. HTML
-The HTML files  for the game isn't long code but extremely vital as everything is built based off of these containers.
+1. the HTML files  for the game isn't long code but extremely vital as everything is built based off of these containers.
 Some major features included in the HTML is: 
 > 1. DIV containers
 > 2. buttons
 > 2. text input form to gather input from user (username)
 
-2. CSS
-CSS is mainly responsible for the styling, but also positioning inluding things like hover effects, which shouldn't be confused with JavaScript functionality which can do things like change the property of an element (like the color of the container to red or green depending on the selection that the user makes)
+2. CSS is mainly responsible for the styling, but also positioning inluding things like hover effects, which shouldn't be confused with JavaScript functionality which can do things like change the property of an element (like the color of the container to red or green depending on the selection that the user makes)
 CSS was not a highlight of this game, as functionality through vanilla PHP is the main focus, but there has been good progress made on a esponsive design for mobile, ipad, small desktop, and larger desktop.
 
 ### Javascript Functions
