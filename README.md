@@ -20,7 +20,7 @@ Not only will it test the skills that are overlooked, but those that are assumed
 >1. Styling + positioning perfecion in CSS
 >2. Debug display of user scores
 
-3. Gold: INCOMPLETE
+3. Gold: INCOMPLETE‼
 > 1. perfect Styling + positioning with CSS
 > 2. add timer and progress bar
 > 3. add multiplayer options
@@ -50,7 +50,7 @@ Some major features included in the HTML is:
 CSS was not a highlight of this game, as functionality through vanilla PHP is the main focus, but there has been good progress made on a esponsive design for mobile, ipad, small desktop, and larger desktop.
 
 ### Javascript Functions
-Javascript in this game operates mostly on functions for different portions of the game that are called when other actions are done such as removing a a new random question from the questiona array and calling the function to give a new question after an answer is given. Where the functions are called is significant for the fluiid function of the game. Javadcript is also responsible for key functions like the colors changing based on the answer being correct/incorrect which involves DOM manipulation which will be covered below.
+Javascript in this game operates mostly on functions for different portions of the game that are called when other actions are done such as removing a a new random question from the questions array and calling the function to give a new question after an answer is given. Where the functions are called is significant for the fluiid function of the game. Javascript is also responsible for key functions like the colors changing based on the answer being correct/incorrect which involves DOM manipulation which will be covered below.
 
 Below is a basic function used in the game. Within this basic function contains all of the information needed to start the game. This includes the question counter and scores which will both be dynamically updated, the questions (as well as the questions left after a random question is taken from the array). As ezplained before, the getNewQuestion function is invoked within this function (even though it is not defined until later on) because out of the available questions left, the player also would need a new question upon answering.
 
@@ -65,7 +65,7 @@ Below is a basic function used in the game. Within this basic function contains 
 
 
 ## Manipulating the DOM
-Manipulating the DOM is the most crucial part of the game because as the user continues the game, not only do the functions need to work but things other than the javvascript will need to be changed.
+Manipulating the DOM is the most crucial part of the game because as the user continues the game, not only do the functions need to work but things other than the Javascript will need to be changed.
 For example, in this below snippet:
 
     saveScore = e => {
