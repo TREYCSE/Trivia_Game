@@ -4,9 +4,9 @@ Assigned from:
 [GA users only](https://pages.git.generalassemb.ly/SEIRFX-1107/curriculum/projects/front-end-game)
 
 ## Description
-Software Star trivia is a quiz-based game that allows openents (software  engineers) to test how much they know about the basics of development with a focus on debugging rather than coding and insustry/career-based preparation questions.
+Software Star trivia is a quiz-based game that allows users to test how much they know about the basics of development with a focus on debugging rather than coding and insustry/career-based preparation questions.
 
-It is intended to test engineers that know the basics, on the nitty gritty of executing a project - before tackling more complicated concepts
+It is intended to test engineers that know the basics, on the nitty gritty of executing a project - before tackling more complicated concepts.
 Not only will it test the skills that are overlooked, but those that are assumed. Much of baseline coding can be done not knowing for sure what each thing means or how each thing works and while it may not seem like a problem at the time, when more complicated projects come it will be harder and harder to debug and also to write code that executes what you want from scratch or otherwise.
 
 ## Brief Example
@@ -50,7 +50,7 @@ Some major features included in the HTML is:
 CSS was not a highlight of this game, as functionality through vanilla PHP is the main focus, but there has been good progress made on a esponsive design for mobile, ipad, small desktop, and larger desktop.
 
 ### Javascript Functions
-Javascript in this game operates mostly on functions for different portions of hte game that are called when other actions are done such as removing a a new random question from the questiona array and calling the function to give a new question after an answer is given. Where the functions are called is significant for the fluiid function of the game. Javadcript is also responsible for key functions like the colors changing based on the answer being correct/incorrect which involves DOM manipulation which will be covered below.
+Javascript in this game operates mostly on functions for different portions of the game that are called when other actions are done such as removing a a new random question from the questiona array and calling the function to give a new question after an answer is given. Where the functions are called is significant for the fluiid function of the game. Javadcript is also responsible for key functions like the colors changing based on the answer being correct/incorrect which involves DOM manipulation which will be covered below.
 
 Below is a basic function used in the game. Within this basic function contains all of the information needed to start the game. This includes the question counter and scores which will both be dynamically updated, the questions (as well as the questions left after a random question is taken from the array). As ezplained before, the getNewQuestion function is invoked within this function (even though it is not defined until later on) because out of the available questions left, the player also would need a new question upon answering.
 
