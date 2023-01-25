@@ -69,7 +69,6 @@ Manipulating the DOM is the most crucial part of the game because as the user co
 For example, in this below snippet:
 
     saveScore = e => {
-        console.log("clicked the save button!");
         e.preventDefault();
 
         const score = {

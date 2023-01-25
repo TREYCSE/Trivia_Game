@@ -1,0 +1,26 @@
+body {
+justify-content: center;
+align-items: center;
+}
+#username {
+    min-height: 0.5rem;
+}
+#saveBtn {
+    min-height: 0.5rem;
+}
+
+/*
+@media screen and (min-width: 700px) {
+
+
+}
+*/
+@media screen and (min-width: 880px) {
+
+}
+
+@media screen and (min-width: 1250px) {
+    #saveBtn {
+        min-height: 1.5rem;
+    }
+}
