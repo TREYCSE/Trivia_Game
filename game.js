@@ -276,6 +276,7 @@ choices.forEach(choice => {
         const classA = "incorrect";
         if (selectedAnswer == currentQuestion.answer) {
             return classA = "correct";
+            //was throwing error w/out return b/c constant
         }
 
         if(classA === "correct")  {
