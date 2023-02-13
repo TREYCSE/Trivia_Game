@@ -275,7 +275,7 @@ choices.forEach(choice => {
 /*common technique to give the answer  a default value here that is classA */
         const classA = "incorrect";
         if (selectedAnswer == currentQuestion.answer) {
-            classA = "correct";
+            return classA = "correct";
         }
 
         if(classA === "correct")  {
