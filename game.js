@@ -273,10 +273,10 @@ choices.forEach(choice => {
 
 /*strict comparison compares the data type as well */
 /*common technique to give the answer  a default value here that is classA */
-        const classA = "incorrect";
+        let classA = "incorrect";
         if (selectedAnswer == currentQuestion.answer) {
-            return classA = "correct";
-            //was throwing error w/out return b/c constant
+          classA = "correct";
+            //was throwing error b/c constant?
         }
 
         if(classA === "correct")  {
